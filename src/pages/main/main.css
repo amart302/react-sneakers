@@ -1,0 +1,20 @@
+main{
+    max-width: 1400px;
+    margin-inline: auto;
+    margin-block: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-inline: 40px;
+}
+.mainImage{
+    width: 100%;
+}
+.catalog{
+    
+}
+.catalog h2{
+    font-size: 32px;
+    font-weight: 700;
+    
+}
