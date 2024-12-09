@@ -9,13 +9,27 @@ function Catalog(){
 
     return(
         <div className="catalog_podBlock">
-            <button onClick={() => dispatch({
-                type: "INCREMENT",
-            })}>+</button>
-            <span>{data}</span>
-            <button onClick={() => dispatch({
-                type: "DECREMENT",
-            })}>-</button>
+            {
+                data.map(item => (
+                    <div className="productCard">
+                        <div className="favourites-block" onClick={() => {
+                            (!item.favourites) ? dispatch({
+                                type: "ADD_TO_FAVOURITES",
+                                payload: item.id
+                            }): dispatch({
+                                type: "DELETE_TO_FAVOURITES",
+                                payload: item.id
+                            })
+                        }}>
+                            <img src={(!item.favourites) ? "./images/favouritesIcon.svg" : "./images/favouritesIconActive.svg"} alt="" />
+                        </div>
+                        <img src={item.imgPath} alt="" />
+                        <p>{item.title}</p>
+                        <p>Цена:</p>
+                        <p>{item.price}</p>
+                    </div>
+                ))
+            }
         </div>
     )
 }

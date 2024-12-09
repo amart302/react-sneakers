@@ -1,0 +1,22 @@
+.catalog_podBlock{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+.productCard{
+    display: flex;
+    flex-direction: column;
+    border-radius: 40px;
+    border: solid 1px #f8f8f8;
+    padding: 30px;
+}
+.favourites-block{
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px #f8f8f8;
+    border-radius: 6px;
+    cursor: pointer;
+}
