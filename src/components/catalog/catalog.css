@@ -20,7 +20,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: solid 1px #f8f8f8;
     border-radius: 6px;
     cursor: pointer;
 }
