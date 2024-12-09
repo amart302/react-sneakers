@@ -5,23 +5,27 @@ import "./catalog.css";
 
 function Catalog(){
     const dispatch = useDispatch();
-    const data = useSelector(state => state);
-
+    const data = useSelector(state => state.data);
+    const fav = useSelector(state => state.favourites);
+    
     return(
         <div className="catalog_podBlock">
             {
                 data.map(item => (
                     <div className="productCard">
                         <div className="favourites-block" onClick={() => {
-                            (!item.favourites) ? dispatch({
+                            (!fav.find(elem => elem == item)) ? dispatch({
                                 type: "ADD_TO_FAVOURITES",
-                                payload: item.id
-                            }): dispatch({
+                                payload: item
+                            }) : dispatch({
                                 type: "DELETE_TO_FAVOURITES",
-                                payload: item.id
+                                payload: item
                             })
                         }}>
-                            <img src={(!item.favourites) ? "./images/favouritesIcon.svg" : "./images/favouritesIconActive.svg"} alt="" />
+                            <img src={
+                                (fav.find(el => el == item)) ? "./images/favouritesIconActive.svg": "./images/favouritesIcon.svg"
+
+                            } alt="" />
                         </div>
                         <img src={item.imgPath} alt="" />
                         <p>{item.title}</p>

@@ -21,7 +21,7 @@ function Header(){
                         Корзина
                     </Link>
                     <Link to="/favourites">
-                        <img src="./images/favouritesIcon.svg" alt="" />
+                        <img src="./images/favouritesLinkIcon.svg" alt="" />
                         Избранное
                     </Link>
                     <Link to="/profile">

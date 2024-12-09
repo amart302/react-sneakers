@@ -1,4 +1,5 @@
 .catalog_podBlock{
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
@@ -10,6 +11,9 @@
     border: solid 1px #f8f8f8;
     padding: 30px;
 }
+.productCard img{
+    width: 100%;
+}
 .favourites-block{
     width: 32px;
     height: 32px;
@@ -19,4 +23,7 @@
     border: solid 1px #f8f8f8;
     border-radius: 6px;
     cursor: pointer;
+}
+.favourites-block img{
+    width: 18px;
 }
