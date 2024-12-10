@@ -19,7 +19,10 @@ export function reducer(state = initialState, action){
                 favourites: [...state.favourites.filter(item => item != action.payload)]
             }
         case "ADD_TO_BASKET":
-            return {...state, basket: true}
+            return {
+                ...state,
+                basket: [...state.basket, action.payload]
+            }
         default:
             return state;
     }

@@ -16,18 +16,20 @@ function Header(){
                     </div>
                 </div>
                 <div className="head_podBlock2">
-                    <Link to="/basket">
-                        <img src="./images/basketIcon.svg" alt="" />
-                        Корзина
-                    </Link>
-                    <Link to="/favourites">
-                        <img src="./images/favouritesLinkIcon.svg" alt="" />
-                        Избранное
-                    </Link>
-                    <Link to="/profile">
-                        <img src="./images/profileIcon.svg" alt="" />
-                        Профиль
-                    </Link>
+                    <nav>
+                        <Link to="/basket">
+                            <img src="./images/basketLinkIcon.svg" alt="" />
+                            Корзина
+                        </Link>
+                        <Link to="/favourites">
+                            <img src="./images/favouritesLinkIcon.svg" alt="" />
+                            Избранное
+                        </Link>
+                        <Link to="/profile">
+                            <img src="./images/profileIcon.svg" alt="" />
+                            Профиль
+                        </Link>
+                    </nav>
                 </div>
             </div>
         </header>
