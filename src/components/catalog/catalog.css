@@ -11,17 +11,23 @@
     border: solid 1px #f8f8f8;
     padding: 30px;
 }
-.productCard img{
+.productImg{
     width: 100%;
 }
 .favourites-block{
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 6px;
+    border: solid 1px #f8f8f8;
+    padding: 8px;
     cursor: pointer;
+}
+.active{
+    border: solid 1px #fef0f0;
+    background-color: #fef0f0;
 }
 .favourites-block img{
     width: 18px;
