@@ -2,8 +2,10 @@ import { useDispatch, useSelector } from "react-redux";
 import "./catalog.css";
 import { useEffect, useState } from "react";
 import { fetchData } from "../../store/products";
+import Sceleton from "../sceleton/Sceleton";
 
 function Catalog(){
+    const [ isLoading, setIsLoading ] = useState(true); 
     const dispatch = useDispatch();
     const data = useSelector(state => state.data);
     const fav = useSelector(state => state.favourites);
@@ -34,13 +36,18 @@ function Catalog(){
     }
 
     useEffect(() => {
-        dispatch(fetchData())
+        setTimeout(() => {
+            dispatch(fetchData());
+            setIsLoading(false);
+        }, 800);
     }, [])
 
     return(
-        <div className="catalog_podBlock">
+        <div>
             {
-                data.map(item => (
+                (isLoading || !data) 
+                ? <Sceleton count={12}/>
+                : (<div className="catalog_podBlock">{data.map(item => (
                     <div className="productCard" key={item.id}>
                         <div onClick={() => handleFavClick(item)}>
                             {
@@ -61,7 +68,7 @@ function Catalog(){
                             </div>
                         </div>
                     </div>
-                ))
+                ))}</div>)
             }
         </div>
     )

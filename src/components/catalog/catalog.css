@@ -4,6 +4,17 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
 }
+.loaders_block{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+.loaderProduct{
+    border-radius: 40px;
+    border: solid 1px #f8f8f8;
+    padding: 30px;
+}
 .productCard{
     position: relative;
     max-width: 210px;
