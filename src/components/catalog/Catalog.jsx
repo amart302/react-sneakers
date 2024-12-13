@@ -38,14 +38,14 @@ function Catalog(){
     useEffect(() => {
         setTimeout(() => {
             dispatch(fetchData());
-            setIsLoading(false);
+            if(data) setIsLoading(false);
         }, 800);
     }, [])
 
     return(
         <div>
             {
-                (isLoading || !data) 
+                (isLoading) 
                 ? <Sceleton count={12}/>
                 : (<div className="catalog_podBlock">{data.map(item => (
                     <div className="productCard" key={item.id}>

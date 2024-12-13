@@ -11,6 +11,9 @@
     gap: 10px;
 }
 .loaderProduct{
+    max-width: 210px;
+    display: flex;
+    flex-direction: column;
     border-radius: 40px;
     border: solid 1px #f8f8f8;
     padding: 30px;
