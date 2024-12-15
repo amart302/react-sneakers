@@ -1,0 +1,36 @@
+.favourites_block_parent{
+    height: calc(100vh - 204px);
+    max-width: 1400px;
+    margin-inline: auto;
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.favourites_block{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.favourites_podBlock1{
+    display: flex;
+    gap: 20px;
+}
+.favourites_podBlock1 button{
+    width: 40px;
+    height: 40px;
+    border: solid 1px #F2F2F2;
+    border-radius: 8px;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.favourites_podBlock1 button:hover{
+    background-color: #F2F2F2;
+}
+.favourites_podBlock2{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
